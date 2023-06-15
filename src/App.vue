@@ -6,12 +6,6 @@ export default {
     RouterLink,
     RouterView,
   },
-  methods: {
-    isHomeView() {
-      const route = useRoute();
-      return route.path === "/";
-    },
-  },
 };
 </script>
 
@@ -26,7 +20,7 @@ export default {
     />
 
     <div class="wrapper">
-      <nav v-if="!isHomeView()">
+      <nav v-if=$route.name !="home">
         <RouterLink class="link" to="/">Home</RouterLink>
         <RouterLink class="link" to="/articles">Articles</RouterLink>
         <RouterLink class="link" to="/books">Books</RouterLink>

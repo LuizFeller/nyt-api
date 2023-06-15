@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ArticlesView from '../views/ArticlesView.vue'
-import BooksView from '../views/BooksView.vue'
-import BookDetailView from '../views/BookDetailView.vue'
+import HomeView from '../views/Home.vue'
+import ArticlesView from '../views/Articles.vue'
+import BooksView from '../views/Books.vue'
+import BookDetailView from '../views/BookDetail.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,7 +23,7 @@ const router = createRouter({
       component: BooksView
     },
     {
-      path: '/detail/:isbn',
+      path: '/book/:isbn',
       name: 'detail',
       component: BookDetailView
     },
@@ -31,4 +31,3 @@ const router = createRouter({
 })
 
 export default router
-// exports.key = "HRb1SQE0WMuY63JclAJXBlxHUAPxAfDl";
